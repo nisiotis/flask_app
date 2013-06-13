@@ -17,7 +17,7 @@ def plot(image, users):
 
     ind = np.arange(c)+0.10
     width = 0.35
-    fig = plt.figure()
+    fig = plt.figure(figsize=(5, 4), dpi=72)
     ax = fig.add_subplot(111)
     rects1 = ax.bar(ind, p, width, color="b")
     plt.ylim((0, 100))
@@ -33,4 +33,4 @@ def plot(image, users):
 
     autolabel(rects1)
 
-    plt.savefig(image, format='png')
+    plt.savefig(image, format='png', dpi=72)
