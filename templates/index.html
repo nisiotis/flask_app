@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Users Index Page</title>
+<h1>All Users :: <a href="/add">Add User</a> :: <a href="/stats">User Stats</a></h1>
+{% if result %}
+    {{ result }} <br />
+{% endif %}
+{% for user in users %}
+    <a href="/edit/{{ user.id }}">Edit</a> <a href="/delete/{{ user.id }}">Delete</a> {{ user.id }} {{ user.name }} {{ user.email }} {{ user.progress }} <br />
+{% endfor %}
+
