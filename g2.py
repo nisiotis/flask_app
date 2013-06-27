@@ -2,9 +2,10 @@
 #!/usr/bin/env python
 
 def plot(image, users):
-    import numpy as np
     import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    import numpy as np
     from scipy import stats
     n = []
     p = []
@@ -13,7 +14,6 @@ def plot(image, users):
         n.append(u.name)
         p.append(u.progress)
         c += 1
-    matplotlib.use('Agg')
 
     ind = np.arange(c)+0.10
     width = 0.35

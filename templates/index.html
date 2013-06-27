@@ -5,6 +5,6 @@
     {{ result }} <br />
 {% endif %}
 {% for user in users %}
-    <a href="/edit/{{ user.id }}">Edit</a> <a href="/delete/{{ user.id }}">Delete</a> {{ user.id }} {{ user.name }} {{ user.email }} {{ user.progress }} <br />
+    <a href="/print/{{ user.id }}">Print</a> <a href="/edit/{{ user.id }}">Edit</a> <a href="/delete/{{ user.id }}">Delete</a> {{ user.id }} {{ user.name }} {{ user.email }} {{ user.progress }} <br />
 {% endfor %}
-
+<a href="/print/0">Print All</a>
